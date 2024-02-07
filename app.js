@@ -5,6 +5,7 @@ const dotenv = require('dotenv')
 const morgan = require('morgan')
 const exphbs = require('express-handlebars')
 const connectDB = require('./config/db')
+const mainRoute = require('./routes/index')
 
 
 //environtment variables
@@ -27,12 +28,15 @@ const hbs = exphbs.create({
 })
 
 //handlebars
-app.engine('handlebars', hbs.engine)
-app.set('view engine', 'handlebars')
+app.engine('hbs', hbs.engine)
+app.set('view engine', '.hbs')
 
 //static folder
 app.use(express.static(path.join(__dirname, 'public')))
 
+
+//Routes
+app.use('/', mainRoute)
 const PORT = process.env.PORT || 2641
 
 app.listen(process.env.PORT, ()=>{

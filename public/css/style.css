@@ -2,13 +2,16 @@ p{
     margin: 10px o !important;
 }
 
+body{
+    background-color: rgb(87, 85, 85);
+}
+
 .login-container{
     width: 400px;
     margin-top: 50px;
     text-align: center;
 }
 
-.btn-float{
-    float: left;
-    margin-left: 10px;
+.card{
+    border-radius: 10px;
 }

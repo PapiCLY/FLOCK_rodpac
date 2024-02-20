@@ -3,7 +3,7 @@ p{
 }
 
 body{
-    background-color: rgb(87, 85, 85);
+    background-image: url('public/images/IMG_20160721_181350.jpg');
 }
 
 .login-container{
@@ -15,6 +15,7 @@ body{
 
 .card{
     border-radius: 10px;
+    background: transparent;
 }
 
 /*compass Icon*/
@@ -27,11 +28,10 @@ body{
   'opsz' 24;
   font-size: 40px;
 }
-/* 
-.icon{
-    display: flex;
-    margin: auto;
-    justify-content: center;
-    text-align: center;
-    padding: 70px 0;
-} */
+
+.blur-container {
+    backdrop-filter: blur(10px); /* Adjust the blur value as needed */
+    background-color: rgba(255, 255, 255, 0.5); /* Adjust the alpha value for transparency */
+    border-radius: 10px;
+}
+
